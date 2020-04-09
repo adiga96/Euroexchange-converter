@@ -2,8 +2,8 @@
 
 Authors:  
 Wilson Jo Siu,
-Pritish Shivananda Adiga
-Abhishek Shirsat
+Pritish Shivananda Adiga,
+Abhishek Shirsat and
 Gokul Selvaraj
 
 ---
