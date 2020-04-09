@@ -36,7 +36,7 @@ The values that are given are also listed in the previous link.
 - Programming for Analytics Video Lectures: Module 5 Online Data
 
 ## Explanation of the Code
-The code, `needs_a_good_name.py`, begins by importing necessary Python packages:
+The code, `euro_currency_converter`, begins by importing necessary Python packages:
 ```
 import matplotlib.pyplot as plt
 ```
