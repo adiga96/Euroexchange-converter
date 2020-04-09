@@ -109,9 +109,15 @@ dates = str(dates)
     historical_df= pd.DataFrame(historical['rates'])
     historical_df = historical_df.drop('rate_for_amount')
     print(historical_df)
-
-
 ```
+With the obtained data from the disred dates we can plot different types 
+
+![Image of Plot](imagesgraph/img1.png)
+
+![Image of Plot](imagesgraph/img2.png)
+
+![Image of Plot](imagesgraph/img3.png)
+
 ---
 
 ## How to Run the Code
