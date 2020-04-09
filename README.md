@@ -40,10 +40,14 @@ The values that are given are also listed in the previous link.
 ## Explanation of the Code
 The code, `euro_currency_converter`, begins by importing necessary Python packages:
 ```
+import http.client  
+import json 
+import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 
 
-
+```
 ---
 
 ## How to Run the Code
