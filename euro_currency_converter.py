@@ -50,4 +50,6 @@ print('\n')
 print('Today Exchange currency values are:\n')
 
 convert_df= pd.DataFrame(convert['rates'])
+convert_df = convert_df.drop('rate_for_amount')
 print(convert_df)
+
