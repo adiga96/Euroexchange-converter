@@ -1,6 +1,10 @@
-# Write a Brief Descriptive Title Here
+# Currency Exchange Online Data
 
-Authors:  **Name 1** and **Name 2**
+Authors:  
+Wilson Jo Siu,
+Pritish Shivananda Adiga
+Abhishek Shirsat
+Gokul Selvaraj
 
 ---
 
