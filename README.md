@@ -68,10 +68,12 @@ The output from this code is shown below:
 ---
 
 ## How to Run the Code
+Before starting we recommend downloading a python IDE or the anaconda package (https://www.anaconda.com/distribution/), which contains multiple Python/R platforms for Data Science.
 
-1. Acess to the Anaconda Prompt
 
-1. Open a terminal window.
+1. Acess to the Anaconda Navigator and go to Spyder applications (Python IDE). When you are on Spyder 
+
+2. Open a terminal window.
 
 2. Change directories to where `needs_a_good_name.py` is saved.
 
@@ -86,5 +88,11 @@ The output from this code is shown below:
 
 ## Suggestions
 
-A currency converter is considered a useful financial tool because it give us up to date values that are 
+A currency converter is considered a useful financial tool because it give us up to date monetary values that. Another important function of the currency converter is that it can interpret how the market behaves by bomparing different dates for one same currency. Economic theories can explain the relationship of the currency values.
+
+A fine example can be related to the Coronavirus and how it is affecting the financial market nowadays. On December 2019 on a specific date, the euro was equal to 1.1070 USD, but on March 12th 2020, the euro was equal to 1.1240 USD. This means the USD is getting a higher demand because investors dont want to but euros (currently a terrible time to invest in Europe)   
+
+There are many more interpretations we can get by comparing thses two values.
+
+
 
