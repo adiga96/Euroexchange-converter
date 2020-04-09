@@ -38,13 +38,77 @@ The values that are given are also listed in the previous link.
 ---
 
 ## Explanation of the Code
-The code, `euro_currency_converter`, begins by importing necessary Python packages:
+The code, `euro_currency_converter`, begins by defining the variable to select date:
 ```
-import http.client  
-import json 
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
+def desiredDate(dates): 
+
+RAPIDAPIKEY = 'd88ac81114msh89e702e586cd793p16570djsn90c636b78795'  
+dates = str(dates)
+    
+    import http.client  
+    import json 
+    import pandas as pd
+    import numpy as np
+    from datetime import date
+    import matplotlib.pyplot as plt
+    
+ # Establish the connection to the particular API 
+    conn = http.client.HTTPSConnection("currency-converter5.p.rapidapi.com")
+
+    headers = {'x-rapidapi-host': "currency-converter5.p.rapidapi.com",'x-rapidapi-key': RAPIDAPIKEY}
+
+# First we will find the List of available currencies:
+# The select API have been provided free of cost and is available for everyone
+    conn.request("GET", "/currency/list", headers=headers)
+
+    resp  = conn.getresponse()
+    data = resp.read().decode("utf-8") 
+    currency = json.loads(data)
+
+# Next, we will check the currency exchange rate based on 1 euro
+#This means that we will obtain all the currencies values equal to 1 euro 
+    conn.request("GET", "/currency/convert", headers=headers)
+    resp = conn.getresponse()
+    data2 = resp.read().decode("utf-8")
+    convert = json.loads(data2)
+
+#change the data to a dataframe  
+    currency_df= pd.DataFrame(currency)
+    print(currency_df)
+
+    print("Base amount Value: ",convert['amount'])
+
+    print("Currency Base Name: ",convert['base_currency_name'])
+
+    print("Currency Base Code: ",convert['base_currency_code'])
+
+# we put the current date to have a better visualization of the output
+    today = date.today()
+    print("Today's date:", today)
+
+    print('\n')
+    print('Today, the exchange currency values are:\n')
+
+#change the data to a dataframe
+    convert_df= pd.DataFrame(convert['rates'])
+    convert_df = convert_df.drop('rate_for_amount')
+    print(convert_df)
+
+    print('\n')
+    print(dates, "The requested date exchange currency values are:\n")
+
+# prepare the dynamic code so we may choose which date we want to see the currency
+    Requesteddate ="/currency/historical/" + dates + ""
+
+    conn.request("GET", Requesteddate, headers=headers)
+    resp = conn.getresponse()
+    data = resp.read().decode("utf-8")
+    historical = json.loads(data)
+    
+#change the data to a dataframe
+    historical_df= pd.DataFrame(historical['rates'])
+    historical_df = historical_df.drop('rate_for_amount')
+    print(historical_df)
 
 
 ```
@@ -52,21 +116,22 @@ import matplotlib.pyplot as plt
 
 ## How to Run the Code
 
-Before starting we recommend downloading a python IDE or the anaconda package (https://www.anaconda.com/distribution/), which contains multiple Python/R platforms for Data Science.
+Before starting we recommend downloading a python IDE or the anaconda package (https://www.anaconda.com/distribution/), which contains multiple Python/R platforms for Data Science. The following steps have been developed by Anaconda Prompt
 
+1. Acess to the Anaconda Prompt (Python IDE), you will get the command window 
 
-1. Acess to the Anaconda Navigator and go to Spyder applications (Python IDE). When you are on Spyder 
+2. Type 'ipython' , inmmediately the interactive development enviroment of python will be loaded
 
-2. Open a terminal window.
+3. Change directories to where `needs_a_good_name.py` is saved.
 
-2. Change directories to where `needs_a_good_name.py` is saved.
+3. Type the following commands to select the folder where the files are located:
+    import os
+    os.chdir("C:/Users/Wilson/Desktop/hw5") -> this is the address for the folder, if you want to know the address right click on the    folder and select properties. The folder address will be essential as it detects the route to import the file
+    os.getcwd()
 
-3. Type the following command:
-	```
-	python needs_a_good_name.py
-	```
+4. Type import euro_currency_converter as var
 
-- *NOTE: You are welcome to provide instructions using Anaconda or IPython.*
+5. Type var.desiredDate(dates) -> the dates value is represented by the string of the date (i the form '')
 
 ---
 
