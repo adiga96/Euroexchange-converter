@@ -8,11 +8,12 @@ Gokul Selvaraj
 
 ---
 
-**NOTE**:  The *italicized* content below is for your reference only.  Please remove these comments before submitting.
-
----
-
 ## Introduction
+
+The type of data we are importinng comes from 
+
+
+
 *The purpose of this section is to provide some information about the data you're exploring.  For example, you should*
 - *Describe the type of data that you're importing.* 
 - *Describe the source of the data.  Include URLs.*  
@@ -21,11 +22,13 @@ Gokul Selvaraj
 ---
 
 ## Sources
-*In this section, provide links to your references.  For example:*
-- The source code came from [the magic source code farm](http://www.amagicalnonexistentplace.com)
-- The code retrieves data from [the organization for hosting cool data](http://www.anothermagicalnonexistentplace.com)
 
----
+- The source code was obtained from:  https://rapidapi.com/natkapral/api/currency-converter5?endpoint=apiendpoint_a4bcb4ce-c9c6-4c58-8ed5-20ccb34098d2
+The current link has information about the API key and webpage host as well how the output will be like and what does it mean(format).It also has some additional information to understand the currency exchange data and what values you can obtain.
+
+- Currency exchange rates are obtained from : https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html 
+The values that are given are also listed in the previous link.
+
 
 ## Explanation of the Code
 *In this section you should provide a more detailed explanation of what, exactly, the above code actually does.  Your classmates should be able to read your explanation and understand what is happening in the code.*
