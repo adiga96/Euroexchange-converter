@@ -148,6 +148,3 @@ A currency converter is considered a useful financial tool because it give us up
 A fine example can be related to the Coronavirus and how it is affecting the financial market nowadays. On December 2019 on a specific date, the euro was equal to 1.1070 USD, but on March 12th 2020, the euro was equal to 1.1240 USD. This means the USD is getting a higher demand because investors dont want to but euros (currently a terrible time to invest in Europe)   
 
 There are many more interpretations we can get by comparing thses two values.
-
-
-
